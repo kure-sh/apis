@@ -1,0 +1,8 @@
+/deno.json
+/deno.lock
+
+/*/schema
+/*/src
+
+/aws/*/schema
+/aws/*/src

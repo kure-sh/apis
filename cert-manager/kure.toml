@@ -1,0 +1,88 @@
+name = "cert-manager"
+
+[[export]]
+path = "github.com/cert-manager/cert-manager/pkg/apis/certmanager/v1"
+group = "cert-manager.io"
+version = "v1"
+
+[[export]]
+path = "github.com/cert-manager/cert-manager/pkg/apis/acme/v1"
+module = "acme"
+group = "acme.cert-manager.io"
+version = "v1"
+
+[[export]]
+path = "github.com/cert-manager/cert-manager/pkg/apis/config/cainjector/v1alpha1"
+module = "config/cainjector"
+group = "cainjector.config.cert-manager.io"
+version = "v1alpha1"
+
+[[export]]
+path = "github.com/cert-manager/cert-manager/pkg/apis/config/controller/v1alpha1"
+module = "config/controller"
+group = "controller.config.cert-manager.io"
+version = "v1alpha1"
+
+[[export]]
+path = "github.com/cert-manager/cert-manager/pkg/apis/config/webhook/v1alpha1"
+module = "config/webhook"
+group = "webhook.config.cert-manager.io"
+version = "v1alpha1"
+
+[[export]]
+path = "github.com/cert-manager/cert-manager/pkg/apis/config/shared/v1alpha1"
+module = "config/shared"
+group = "shared.config.cert-manager.io"
+version = "v1alpha1"
+
+[[export]]
+path = "github.com/cert-manager/cert-manager/pkg/apis/meta/v1"
+module = "meta"
+group = "meta.cert-manager.io"
+version = "v1"
+
+[[dependency]]
+name = "kubernetes"
+version = "1.30"
+
+[[dependency]]
+name = "component-base"
+version = "0.30"
+
+[[dependency]]
+name = "gateway"
+version = "0.5"
+
+[[extern]]
+path = "k8s.io/apimachinery/pkg/apis/meta/v1"
+package = "kubernetes"
+module = "meta"
+group = "meta"
+version = "v1"
+
+[[extern]]
+path = "k8s.io/api/core/v1"
+package = "kubernetes"
+module = "core"
+group = ""
+version = "v1"
+
+[[extern]]
+path = "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
+package = "kubernetes"
+module = "apiextensions"
+group = "apiextensions.k8s.io"
+version = "v1"
+
+[[extern]]
+path = "k8s.io/component-base/logs/api/v1"
+package = "component-base"
+group = "logs.component.k8s.io"
+module = "logs"
+version = "v1"
+
+[[extern]]
+path = "sigs.k8s.io/gateway-api/apis/v1"
+package = "gateway"
+group = "gateway.networking.k8s.io"
+version = "v1"

@@ -1,0 +1,48 @@
+name = "external-secrets"
+
+[[export]]
+path = "github.com/external-secrets/external-secrets/apis/externalsecrets/v1beta1"
+group = "external-secrets.io"
+version = "v1beta1"
+
+[[export]]
+path = "github.com/external-secrets/external-secrets/apis/externalsecrets/v1alpha1"
+group = "external-secrets.io"
+version = "v1alpha1"
+
+[[export]]
+path = "github.com/external-secrets/external-secrets/apis/generators/v1alpha1"
+module = "generators"
+group = "generators.external-secrets.io"
+version = "v1alpha1"
+
+[[export]]
+path = "github.com/external-secrets/external-secrets/apis/meta/v1"
+module = "meta"
+group = "meta.external-secrets.io"
+version = "v1"
+
+[[dependency]]
+name = "kubernetes"
+version = "1.30"
+
+[[extern]]
+path = "k8s.io/apimachinery/pkg/apis/meta/v1"
+package = "kubernetes"
+module = "meta"
+group = "meta"
+version = "v1"
+
+[[extern]]
+path = "k8s.io/api/core/v1"
+package = "kubernetes"
+module = "core"
+group = ""
+version = "v1"
+
+[[extern]]
+path = "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
+package = "kubernetes"
+module = "apiextensions"
+group = "apiextensions.k8s.io"
+version = "v1"

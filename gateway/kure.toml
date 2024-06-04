@@ -1,0 +1,32 @@
+name = "gateway"
+
+[[export]]
+path = "sigs.k8s.io/gateway-api/apis/v1"
+group = "gateway.networking.k8s.io"
+version = "v1"
+
+[[export]]
+path = "sigs.k8s.io/gateway-api/apis/v1beta1"
+group = "gateway.networking.k8s.io"
+version = "v1beta1"
+
+[[export]]
+path = "sigs.k8s.io/gateway-api/apis/v1alpha3"
+group = "gateway.networking.k8s.io"
+version = "v1alpha3"
+
+[[export]]
+path = "sigs.k8s.io/gateway-api/apis/v1alpha2"
+group = "gateway.networking.k8s.io"
+version = "v1alpha2"
+
+[[dependency]]
+name = "kubernetes"
+version = "1.30"
+
+[[extern]]
+path = "k8s.io/apimachinery/pkg/apis/meta/v1"
+package = "kubernetes"
+module = "meta"
+group = "meta"
+version = "v1"

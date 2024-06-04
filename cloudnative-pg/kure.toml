@@ -1,0 +1,41 @@
+name = "cloudnative-pg"
+
+[[export]]
+path = "github.com/cloudnative-pg/cloudnative-pg/api/v1"
+group = "postgresql.cnpg.io"
+version = "v1"
+
+[[dependency]]
+name = "kubernetes"
+version = "1.30"
+
+[[dependency]]
+name = "prometheus"
+version = "0.74"
+
+[[extern]]
+path = "k8s.io/apimachinery/pkg/apis/meta/v1"
+package = "kubernetes"
+module = "meta"
+group = "meta"
+version = "v1"
+
+[[extern]]
+path = "k8s.io/api/apps/v1"
+package = "kubernetes"
+module = "apps"
+group = "apps"
+version = "v1"
+
+[[extern]]
+path = "k8s.io/api/core/v1"
+package = "kubernetes"
+module = "core"
+group = ""
+version = "v1"
+
+[[extern]]
+path = "github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring/v1"
+package = "prometheus"
+group = "monitoring.coreos.com"
+version = "v1"

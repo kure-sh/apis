@@ -1,0 +1,25 @@
+name = "aws/ack"
+
+[[export]]
+path = "github.com/aws-controllers-k8s/runtime/apis/core/v1alpha1"
+group = "services.k8s.aws"
+module = "core"
+version = "v1alpha1"
+
+[[dependency]]
+name = "kubernetes"
+version = "1.29"
+
+[[extern]]
+path = "k8s.io/apimachinery/pkg/apis/meta/v1"
+package = "kubernetes"
+module = "meta"
+group = "meta"
+version = "v1"
+
+[[extern]]
+path = "k8s.io/api/core/v1"
+package = "kubernetes"
+module = "core"
+group = ""
+version = "v1"
