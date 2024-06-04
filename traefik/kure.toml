@@ -1,0 +1,86 @@
+name = "traefik"
+
+[[export]]
+path = "github.com/traefik/traefik/v3/pkg/provider/kubernetes/crd/traefikio/v1alpha1"
+group = "traefik.io"
+version = "v1alpha1"
+
+[[export]]
+path = "github.com/traefik/traefik/v3/pkg/config/dynamic"
+module = "config/dynamic"
+group = "dynamic.config.traefik.io"
+version = "v1alpha1"
+include = [
+    "AddPrefix",
+    "Buffering",
+    "Compress",
+    "ContentType",
+    "Cookie",
+    "GrpcWeb",
+    "Headers",
+    "InFlightReq",
+    "IPAllowList",
+    "IPStrategy",
+    "IPWhiteList",
+    "PassTLSClientCert",
+    "ProxyProtocol",
+    "RedirectRegex",
+    "RedirectScheme",
+    "ReplacePath",
+    "ReplacePathRegex",
+    "ServerHealthCheck",
+    "SourceCriterion",
+    "Spiffe",
+    "Sticky",
+    "StripPrefix",
+    "StripPrefixRegex",
+    "TCPInFlightConn",
+    "TCPIPAllowList",
+    "TCPIPWhiteList",
+    "TLSClientCertificateInfo",
+    "TLSClientCertificateIssuerDNInfo",
+    "TLSClientCertificateSubjectDNInfo",
+]
+merge = {}
+
+[[export]]
+path = "github.com/traefik/traefik/v3/pkg/tls"
+module = "tls"
+group = "tls.traefik.io"
+version = "v1alpha1"
+include = ["GeneratedCert"]
+merge = {}
+
+[[export]]
+path = "github.com/traefik/traefik/v3/pkg/types"
+module = "types"
+group = "types.traefik.io"
+version = "v1alpha1"
+include = ["Domain"]
+merge = {}
+
+[[export]]
+path = "github.com/traefik/paerser/types"
+module = "types/parser"
+group = "parser.types.traefik.io"
+version = "v1alpha1"
+include = ["Duration"]
+merge = {}
+
+[[dependency]]
+name = "kubernetes"
+version = "1.30"
+
+[[extern]]
+path = "k8s.io/apimachinery/pkg/apis/meta/v1"
+package = "kubernetes"
+module = "meta"
+group = "meta"
+version = "v1"
+
+[[extern]]
+path = "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
+package = "kubernetes"
+module = "apiextensions"
+group = "apiextensions.k8s.io"
+version = "v1"
